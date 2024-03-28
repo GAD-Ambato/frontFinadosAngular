@@ -1,0 +1,346 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+
+<div class="row justify-content-center my-4">
+  <div class="col-lg-2 col-4">
+        <div>
+      <img src="assets/home/Ambato.png" class="w-100" alt="" />
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-12 col-12">
+    <div>
+      <img src="assets/banner/Banner 5.png" class="w-100" alt="..."  />
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-10" style="display: flex; align-items: center">
+    <div class="container mt-4">
+      <app-stepper [currentStep]="paso" [steps]="pasos"></app-stepper>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-10" style="display: flex; align-items: center">
+    <div class="container mt-4">
+      <p style="text-align: start" class="titulo">Términos y Condiciones</p>
+
+      
+          <h4 class="subtitulo">
+            Incumplir estas condiciones resultará en la revocación del permiso y
+            la pérdida de la garantía en caso de tenerla.
+          </h4>
+     
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center mt-3">
+  <div class="col-lg-4 col-10">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="check1"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        El adjudicatario del espacio, no podrá ceder, donar o arrendar total o
+        parcialmente a otras personas su espacio asignado, ni cambiar el giro de
+        negocio; de comprobarse esta infracción será desalojado del lugar de
+        expendio sin lugar a reclamo alguno.
+      </label>
+    </div>
+  </div>
+  <div *ngIf="contenedor8l">
+    <div class="row justify-content-center mt-3">
+      <div class="col-lg-4 col-10 mt-3">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="checkbasurero"
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            El tamaño del contenedor debe ser de 8L.
+            Los colores establecidos en la normativa,(verde orgánicos, azul reciclables, negro NO Reciclables)
+          se sugiere adaptar al espacio disponible los contenedores,
+           Los basureros deben tener cada puesto y es obligatorio.
+          </label>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div *ngIf="contenedor50l">
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="checkbasurero"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+       El contenedor de basura debe ser de 50L.
+       Los colores establecidos en la normativa,(verde orgánicos, azul reciclables, negro NO Reciclables)
+       se sugiere adaptar al espacio disponible los contenedores,
+        colocar cada 2 o 3 puestos o en cada esquina.
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-10">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-10">
+    
+        <img src="assets/firstimages/verde.jpg" class="card-img-top px-2 py-2 " alt="...">
+    
+      </div>
+      <div class="col-lg-4 col-10">
+        <img src="assets/firstimages/negro.jpg" class="card-img-top px-2 py-2 " alt="...">
+    
+      </div>
+      <div class="col-lg-4 col-10">
+        <img src="assets/firstimages/azul.jpg" class="card-img-top px-2 py-2 " alt="...">
+    
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check2"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Está prohibido la venta de sustancias
+          psicotrópicas(drogas,marihuana,cocaína) bebidas alcohólicas y/o de
+          moderación.
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check3"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          No hacer uso de equipos de amplificación o altos parlantes que
+          ocasionen molestias a los expositores,comerciantes y público general.
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check4"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Queda terminantemente prohibido ocupar espacios adicionales a los
+          asignados o del área asignada.
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check5"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Está prohibida el trabajo de menores de edad (0-15 años) o cualquier
+          tipo de explotación laboral o económica.
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check6"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Cumplir con los horarios establecidos por la feria (08:00 a 24:00H)
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check7"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          No obstruir con sus ventas los pasillos de circulación peatonal.
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check8"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Los expositores deberán instalar sus estands manteniendo los
+          estándares de calidad y no deberán ser instalados con plásticos.
+          Usted debe llevar su propia carpa de manera obligatoria.
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check9"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          El horario de carga y descarga será de 07:00am - 09:00am (2 horas), será de
+          estricto cumplimiento para todos los feriantes.
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check10"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Los feriantes y expositores que mantengan actitudes reñidas en contra de la ética y la moral ,serán puestos a órdenes de las autoridades competentes.
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check11"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+          Los arrendatarios deberán cumplir con las disposiciones que establece la ordenanza de la Feria de Finados.
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check2"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+        Por el incumplimiento de estos términos se puede revocar el permiso.
+        </label>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check13"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+        Prohibido el acceso de vehículos al recinto ferial.
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10 mt-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="check14"
+        />
+        <label class="form-check-label" for="flexCheckDefault">
+        Acepto que la información proporcionada es verídica.
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="centraritems">
+        <button class="aceptar"(click)="Pagar()"  >
+          Aceptar
+          
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="centraritems">
+        <button class="cancelar" (click)="cancelar()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

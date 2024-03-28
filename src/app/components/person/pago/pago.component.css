@@ -1,0 +1,111 @@
+.titulo{
+    font-size: 12;
+    font-weight: 500;
+    color:#0074B8;
+}
+.parrafo{
+    text-align: justify;
+    font-size: 14;
+}.centraritems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cuadro{
+    background-color: rgb(248, 233, 214);
+     height: 100px;
+     border-top-left-radius: 15px;
+     border-top-right-radius: 15px;
+     border-bottom-right-radius: 15px;
+     border-bottom-left-radius: 15px;
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     border-color: transparent;
+  }
+  .centraritems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .centrarbotones {
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+  .aceptar {
+    width: 270px;
+    height: 50px;
+    font-size: 15pt;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0074B8;
+    color: white;
+    border-color: transparent;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .banner{
+    width: 100%;
+    height: 100px;
+  
+  }
+  .titulo {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #963C8E;
+    text-align: center;
+  }
+  .subtitulo{
+    color: black;
+    font-weight: 600;
+    text-align: center;
+  }
+  .aceptar:hover {
+   
+    font-size: 16pt;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0074B8;
+    color: white;
+    border-color: transparent;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .cancelar {
+      width: 270px;
+      height: 50px;
+      font-size: 15pt;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #aaabb1;
+      color: white;
+      border-color: transparent;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  .cancelar:hover {
+      width: 270px;
+      height: 50px;
+      font-size: 16pt;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #aaabb1;
+      color: white;
+      border-color: transparent;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  

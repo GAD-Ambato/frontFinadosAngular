@@ -1,0 +1,254 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<div class="row justify-content-center my-4">
+  <div class="col-lg-2 col-4">
+    <div>
+      <img src="assets/home/Ambato.png" alt="..." class="w-100" />
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-12 col-12">
+    <div>
+      <img src="assets/banner/Banner 7.png" class="w-100" alt="..." />
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-10" style="display: flex; align-items: center">
+    <div class="container mt-4">
+      <app-stepper [currentStep]="paso" [steps]="pasos"></app-stepper>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center mt-3">
+  <div class="col-lg-4 col-10">
+    <div class="centrar mt-3">
+      <div class="btn1 centraritems" >
+        <a
+        style="text-align: center;color: white; "
+          href="https://gadambato-my.sharepoint.com/:b:/g/personal/gadmaapps_ambato_gob_ec/EXXVmXfkrHxMm6lTFCx0cSQBdofdS9riD18w3GGAiAvVbg?e=ZpjxG1"
+        target="_blank"
+          >Ver distribución de puestos</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-10" style="display: flex; align-items: center">
+    <div class="container mt-4">
+      <p class="titulo">ELIGE LA CANTIDAD DE PUESTOS QUE VAS A ADQUIRIR</p>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div
+    class="col-lg-4 col-10 centraritems"
+    style="display: flex; align-items: center"
+  >
+    <div class="containeralert mt-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-2 col-2 centraritems">
+          <svg
+        
+            xmlns="http://www.w3.org/2000/svg"
+            
+            viewBox="0 0 512 512"
+            fill="rgb(223, 53, 53)"
+          >
+            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
+            />
+          </svg>
+        </div>
+        <div class="col-lg-10 col-10">
+          <div class="container">Máximo cuatro lugares contiguos.</div>
+          <div class="container">Asignación Aleatoria.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center mt-3">
+  <div class="col-lg-4 col-10 centraritems">
+    <div class="centrar mt-3">
+      <p class="elijatxt">Elija la cantidad de puestos que desea adquirir</p>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center mt-3">
+  <div class="col-lg-4 col-10">
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-3">
+        <button class="btnresta" type="button" (click)="restar()">-</button>
+      </div>
+      <div class="col-lg-6 col-6 numero">
+        {{ cantidad }}
+      </div>
+      <div class="col-lg-3 col-3">
+        <button class="btnsuma" type="button" (click)="sumar()">+</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="cantidadpuestosmayor">
+  <div class="row justify-content-center mt-3">
+    <div class="col-lg-4 col-10">
+      <div class="centrar mt-3">
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="inlineRadioOptions"
+            id="inlineRadio1"
+            value="contiguo"
+            (click)="onRadioButtonClick($event)"
+          />
+          <label class="form-check-label" for="inlineRadio1">Continuos</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="inlineRadioOptions"
+            id="inlineRadio2"
+            value="esparcido"
+            (click)="onRadioButtonClick($event)"
+          />
+          <label class="form-check-label" for="inlineRadio2">Separados</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center my-3">
+  <div class="col-lg-4 col-10">
+    <div class="centrar mt-3">
+      <button
+        class="btnobtenerpuesto"
+        style="width: 250px"
+        (click)="obtenerP()"
+        type="button"
+      >
+        Sortear puestos
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="justify-content-center">
+  <div class="container">
+    <h3 class="cssbloque">bloque: {{ bloque }}</h3>
+  </div>
+</div>
+<div class="row justify-content-center mt-4">
+  <div class="col-lg-4 col-10">
+    <div class="centrar mt-3">
+      <div *ngIf="sorteados && sorteados.length">
+        <!-- Contenido que depende de 'sorteados' como un array válido -->
+
+        <div
+          class="list-group list-group-horizontal"
+          style="background-color: rgb(0, 0, 0)"
+        >
+          <div *ngFor="let item of sorteados">
+            <a
+              class="list-group-item list-group-item-action"
+              style="
+                background-color: rgb(148, 157, 202);
+                color: black;
+                font-weight: 500;
+                font-size: 18;
+              "
+              aria-current="true"
+            >
+              {{ item["NUM_PUESTO"] }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-10">
+    <div class="centrar mt-3">
+      puestos  (blanco disponibles - rojo ocupados)
+      <div *ngIf="tercerarray && tercerarray.length">
+        <!-- Contenido que depende de 'tercerarray' como un array válido -->
+
+        <div
+          class="list-group list-group-horizontal"
+          style="background-color: rgb(29, 38, 161)"
+        >
+          puestos disponibles
+          <div *ngFor="let i of tercerarray">
+            <div>
+              <a
+                class="list-group-item list-group-item-action"
+                aria-current="true"
+              >
+                {{ i["NUM_PUESTO"] }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-10">
+    <div class="centrar mt-3">
+      <div *ngIf="arrayfiltrado && arrayfiltrado.length">
+        <!-- Contenido que depende de 'arrayfiltrado' como un array válido -->
+
+        <div class="" style="background-color: transparent">
+          <div>
+            <div class="wrapper">
+              <ng-container *ngFor="let i of arrayfiltrado">
+                <div class="item"   [style.background-color]="i.estado ? 'rgb(222, 63, 63)' : 'transparent'">
+                  <a
+                    class="list-group-item list-group-item-action"
+                    aria-current="true"
+                  
+                  >
+                    {{ i["NUM_PUESTO"] }}
+                  </a>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+
+
+<div class="row justify-content-center">
+  <div class="col-lg-4 col-10">
+    <div class="centrar mt-4">
+      <div class="row justify-content-center">
+        <div class="centraritems">
+          <button class="aceptar" (click)="aceptar()">
+            <a style="color: white; text-decoration-style: none" >Guardar </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="centraritems">
+      <button class="cancelar" (click)="cancelar()">Cancelar</button>
+    </div>
+  </div>
+</div>

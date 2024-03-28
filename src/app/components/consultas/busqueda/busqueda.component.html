@@ -1,0 +1,157 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+
+<div class="row justify-content-center my-4">
+  <div class="col-lg-2 col-4">
+    <div>
+      <img src="assets/home/Ambato.png" class="w-100" alt=".." />
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-12 col-12">
+    <div>
+      <img src="assets/banner/Banner 2.png" class="w-100" alt="..." />
+    </div>
+  </div>
+</div>
+<form [formGroup]="form" onsubmit="">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-10 my-4">
+        <div class="mb-3">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            (change)="seleccioneTipoDocumento($event)"
+          >
+            <option disabled selected>Seleccione el tipo de documento</option>
+            <option value="CED">Cédula</option>
+            <option value="RUC">RUC</option>
+            <option value="PAS">Pasaporte</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-10">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Ingrese su número de cédula</label
+          >
+          <input
+            maxlength="12"
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            formControlName="fcnnumero"
+            aria-describedby="emailHelp"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-10 my-4">
+        <div class="mb-3" style="text-align: center">
+          <button class="aceptar" (click)="consultar()">Consultar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="row justify-content-center">
+  <div class="col-lg-10 col-10">
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th scope="col">Usuario</th>
+            <th scope="col">Cod Solicitud</th>
+            <th scope="col">Negocio</th>
+            <th scope="col">Bloque</th>
+            <th scope="col">Puesto</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Estado de pago</th>
+            <th scope="col">Subtotal</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let contador of arrayresp; let i = index">
+            <td>{{ contador["nombre"] }}</td>
+            <td>{{ contador["cod_solicitud"] }}</td>
+            <td>{{ contador["nomNego"] }}</td>
+            <td>{{ contador["nomBloq"] }}</td>
+            <td>{{ contador["numPuesto"] }}</td>
+            <td>{{ contador["estSolicitud"] }}</td>
+            <td>{{ contador["estFactura"]! }}</td>
+            <td>{{ contador["valFac"] }}</td>
+            <td *ngIf="contador['estSolicitud'] === 'RECAUDADO'">
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="generatePDF(contador, index)"
+              >
+                Descragar Documentación
+              </button>
+            </td>
+            <td *ngIf="contador['estSolicitud'] === 'NEGADO'">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Ver Razón
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div
+                        class="modal-body"
+                        [innerHTML]="contador['rechazo']"
+                      ></div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            Total:
+            {{
+              total
+            }}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->

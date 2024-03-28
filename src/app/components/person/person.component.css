@@ -1,0 +1,115 @@
+/* .btn1{
+    border-radius: 15px;
+    border-color: rgb(28, 120, 240);
+    height: 50px;
+    width: 250px;
+    font-weight: 500;
+    color: rgb(28, 120, 240);
+}
+.centrar{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.elijatxt{
+    text-align: center;
+    color: grey;
+}
+.btnsuma{
+width: 100%;
+height: 50px;
+    background-color: rgb(47, 126, 47);
+    color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-color: transparent;
+    font-size: 20pt;
+    text-align: center;
+}
+.btnresta{
+    width: 100%;
+height: 50px;
+    background-color: rgb(223, 53, 53);
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-color: transparent;
+    font-size: 20pt;
+    text-align: center;
+
+}
+.numero{
+    text-align: center;
+    font-size: 20pt;
+    font-weight: 500;
+    border-color: black;
+}
+.btnobtenerpuesto{
+    border-radius: 15px;
+    border-color: rgb(28, 120, 240);
+    background-color: rgb(28, 120, 240);
+    height: 50px;
+    width: 250px;
+    font-weight: 500;
+    color: rgb(28, 120, 240);
+    color: white;
+    font-weight: 500;
+
+}
+.aceptar {
+    width: 270px;
+    height: 50px;
+    font-size: 15pt;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0074B8;
+    color: white;
+    border-color: transparent;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .aceptar:hover {
+   
+    font-size: 16pt;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0074B8;
+    color: white;
+    border-color: transparent;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .cancelar {
+      width: 270px;
+      height: 50px;
+      font-size: 15pt;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #aaabb1;
+      color: white;
+      border-color: transparent;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  .cancelar:hover {
+      width: 270px;
+      height: 50px;
+      font-size: 16pt;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #aaabb1;
+      color: white;
+      border-color: transparent;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    } */

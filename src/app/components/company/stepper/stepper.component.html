@@ -1,0 +1,18 @@
+
+<div class="custom-stepper">
+    <div class="line"></div>
+    <div
+      *ngFor="let step of steps; let i = index"
+      class="step-container"
+      [class.active]="i <= currentStep"
+    >
+      <div class="step">
+        <div class="step-number" >{{ i + 1 }}</div>
+       <!--  <div class="step-number" *ngIf="i <= currentStep">
+          <i class="fa fa-check"></i>
+        </div> -->
+      </div>
+      <div class="step-label">{{ step }}</div>
+    </div>
+  </div>
+  

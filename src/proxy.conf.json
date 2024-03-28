@@ -1,0 +1,13 @@
+{
+    "/api": {
+        "target": "https://prueba.ambato.gob.ec:8443",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/api": "/"
+        },
+        "headers": {
+            "Connection": "keep-alive"
+        }
+    }
+}

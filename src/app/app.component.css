@@ -1,0 +1,15 @@
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+@font-face {
+  font-family: 'Monserrat';
+  src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype'); /* Ruta relativa desde la ubicación de styles.css */
+  /* Otras definiciones de fuente aquí */
+}
+.fondo {
+    background-image: url('/assets/home/fondo.png');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el formulario */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    /* Otras propiedades de estilo como colores, márgenes, etc. */
+  }
+  * {
+    font-family: 'Monserrat', sans-serif;
+  }

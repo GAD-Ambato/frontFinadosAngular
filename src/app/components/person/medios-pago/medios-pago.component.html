@@ -1,0 +1,207 @@
+<div class="row justify-content-center my-4">
+  <div class="col-lg-2 col-4">
+    <div>
+      <img src="assets/home/Ambato.png" class="w-100" alt=".." />
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-12 col-12">
+    <div>
+      <img src="assets/banner/Banner 4.png" class="w-100" alt="..." />
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-10">
+    <div class="container mt-4 centraritems">
+      <p class="titulo">¿Cómo pagar tu lugar en la feria de Shuyurco?</p>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-10">
+    <div class="container mt-4 centraritems">
+      <p class="subtitulo">
+        Ahora puedes pagar tu lugar en la feria de Shuyurco en :
+      </p>
+  
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-10 py-2 px-2 my-2" style="text-align: center;" >
+          
+          <img src="assets/bancos/chibuleo.png" class="w-75" alt="..." style="text-align: center;" />
+        </div>
+        <div class="col-lg-5 col-10 py-2 px-2 my-2" style="text-align: center;" >
+          
+          <img src="assets/bancos/jep.png" class="w-75" alt="..."  />
+        </div>
+       
+          <div class="col-lg-5 col-10 py-2 px-2 my-2" style="text-align: center;" >
+          
+          <img  src="assets/bancos/cacpeco.webp" class="w-50" alt="..."  />
+
+        </div>
+          <div class="col-lg-5 col-10 py-2 px-2 my-2 " style="text-align: center;" >
+          
+          <img width="250px"  src="assets/bancos/oscus.jpg" class="w-75" alt="..."  />
+
+        </div>
+          <div class="col-lg-5 col-10 py-2 px-2 my-2 my-4" style="text-align: center;" >
+          
+          <img width="250px"  src="assets/bancos/29.jpg" class="w-75" alt="..."  />
+
+        </div>
+        <div class="col-lg-5 col-10 py-2 px-2 my-2" style="text-align: center;" >
+          
+          <img src="assets/bancos/facilito.png" class="w-75" alt="..."  />
+
+        </div>
+        <div class="col-lg-5 col-10 py-2 px-2 my-2" style="text-align: center;" >
+          
+          <img src="assets/bancos/produbanco.jpeg" class="w-75" alt="..."  />
+        </div>
+        <div class="col-lg-5 col-10 py-2 px-2 my-2"  style="text-align: center;">
+          
+          <img src="assets/bancos/pacifico.jpg" class="w-75" alt="..." />
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-10">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+   
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+  
+      <td>1. Busca Pagar servicios</td>
+     
+    </tr>
+    <tr>
+ 
+      <td>2. Selecciona GAD Ambato o Municipio de Ambato</td>
+      
+    </tr>
+    <tr>
+     
+      <td colspan="2">3. Ingresa tu numero de cédula o pasaporte</td>
+    
+    </tr>
+    <tr>
+    
+      <td colspan="2">4. Paga el valor del espacio en la feria </td>
+    
+    </tr>
+    <tr>
+    
+      <td colspan="2">5. Listo tus lugares ya están pagados</td>
+    
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center mt-4 ">
+  <div class="col-lg-8 col-10">
+    <div class="container my-2 centraritems">
+      <p class="titulo">Busca el lugar más cercano</p>
+    </div>
+  </div>
+</div>
+<div class="row  justify-content-center">
+  <div class="col-lg-8 col-10">
+    <div class="container mt-4 centraritems">
+      <p class="item">Si estas en móvil desliza la tabla hacia los lados</p>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center my-4">
+  <div class="col-lg-8 col-10">
+    <div class="container mt-4 centraritems">
+      <div class="container mt-4">
+        <div class="d-md-flex align-items-center border-top bg-white p-3">
+          <div>
+            <input
+              type="text"
+              placeholder="Buscar por Nombre"
+              class="form-control rounded-pill"
+              [(ngModel)]="searchTerm"
+            />
+          </div>
+
+          <div class="ms-auto mt-3 mt-md-0">
+            <!-- No. of  Contacts-->
+            <a
+              href="javascript:void(0)"
+              class="d-flex align-items-center px-3 py-2 rounded-pill bg-light"
+            >
+              <h5 class="mb-0 me-1 text-dark fs-3">Lugares</h5>
+              <span
+                *ngIf="productFilter"
+                class="badge bg-danger badge-pill px-3 fs-3"
+                >{{ productFilter.length }}</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table
+            class="table bg-white table-hover align-middle mb-0 text-nowrap"
+          >
+            <thead>
+              <tr>
+                <th>PROVINCIA</th>
+                <th>CANTON</th>
+                <th>PARROQUIA</th>
+                <th>AGENCIA</th>
+
+                <th>INSTITUCION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let product of productFilter
+                    | slice
+                      : (page - 1) * pageSize
+                      : (page - 1) * pageSize + pageSize
+                "
+                (click)="seleccionarFila(product?.Latitud, product?.Longitud)"
+              >
+                <td>
+                  {{ product?.PROVINCIA }}
+                </td>
+                <td>
+                  {{ product?.CANTON }}
+                </td>
+                <td>
+                  {{ product?.PARROQUIA }}
+                </td>
+                <td>
+                  {{ product?.AGENCIA }}
+                </td>
+
+                <td>
+                  {{ product?.INSTITUCION }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
